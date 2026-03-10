@@ -9,7 +9,7 @@ export default function HelloWorld(){
         <div className="card">
             <img src="./img/gambar.png" alt="logo" width="100%"  />
             <h1>Hello World</h1>
-            <p>GASSSSS KEUNNNN!!!</p>
+           
 
             <GreetingBinjai/>
             <QuoteText/>
