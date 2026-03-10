@@ -1,0 +1,133 @@
+/* Background halaman dengan animasi warna seperti game */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: rgb(29, 25, 25);
+
+    /* Background warna cerah gaming */
+    background: linear-gradient(270deg, #4facfe, #00f2fe, #7b2ff7, #f107a3);
+    background-size: 800% 800%;
+    animation: bgMove 12s ease infinite;
+}
+
+/* Animasi background bergerak */
+@keyframes bgMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Container utama */
+.card {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+
+    /* efek kaca seperti UI game */
+    backdrop-filter: blur(10px);
+
+    /* glow */
+    box-shadow: 0 0 15px #694b4b,
+                0 0 25px #4facfe,
+                0 0 35px #7b2ff7;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #312323;
+    text-shadow: 0 0 10px #00f2fe, 0 0 20px #7b2ff7;
+}
+
+/* Paragraf */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Garis */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, white, transparent);
+    margin: 15px 0;
+}
+
+/* Greeting */
+small {
+    display: block;
+    text-align: center;
+    color: #312727;
+    margin-top: 10px;
+}
+
+/* efek hover */
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px #221a1a,
+                0 0 35px #00f2fe,
+                0 0 50px #7b2ff7;
+    transition: 0.3s;
+}
+
+/* Dekorasi ikon game kiri */
+body::before{
+    content:"";
+    position: fixed;
+    top:0;
+    left:0;
+    width:120px;
+    height:100%;
+    pointer-events:none;
+
+    background-image:
+    url("https://cdn-icons-png.flaticon.com/512/686/686589.png"),
+    url("https://cdn-icons-png.flaticon.com/512/833/833472.png"),
+    url("https://cdn-icons-png.flaticon.com/512/1055/1055687.png"),
+    url("https://cdn-icons-png.flaticon.com/512/686/686589.png");
+
+    background-repeat:no-repeat;
+
+    /* posisi random kiri */
+    background-position:
+    20px 100px,
+    50px 300px,
+    10px 520px,
+    60px 750px;
+
+    background-size:35px;
+    opacity:0.8;
+}
+
+/* Dekorasi ikon game kanan */
+body::after{
+    content:"";
+    position: fixed;
+    top:0;
+    right:0;
+    width:120px;
+    height:100%;
+    pointer-events:none;
+
+    background-image:
+    url("https://cdn-icons-png.flaticon.com/512/686/686589.png"),
+    url("https://cdn-icons-png.flaticon.com/512/833/833472.png"),
+    url("https://cdn-icons-png.flaticon.com/512/1055/1055687.png"),
+    url("https://cdn-icons-png.flaticon.com/512/686/686589.png");
+
+    background-repeat:no-repeat;
+
+    /* posisi random kanan */
+    background-position:
+    40px 150px,
+    70px 350px,
+    30px 600px,
+    80px 820px;
+
+    background-size:35px;
+    opacity:0.8;
+}
