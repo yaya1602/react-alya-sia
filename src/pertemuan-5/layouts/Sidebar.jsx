@@ -59,7 +59,7 @@ const Sidebar = () => {
           Please organize your menus through button below!
         </p>
         <button className="bg-white text-green-500 px-3 py-1 rounded">
-          + Add Menus
+          + Add Menu
         </button>
       </div>
 

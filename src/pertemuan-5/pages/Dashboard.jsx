@@ -58,7 +58,7 @@ const Dashboard = () => {
                 <FaShoppingCart className="text-green-500" />
               </div>
               <div>
-                <h2 className="font-bold text-lg">75</h2>
+                <h2 className="font-bold text-lg">300</h2>
                 <p className="text-gray-400 text-sm">Total Orders</p>
               </div>
             </div>
@@ -68,7 +68,7 @@ const Dashboard = () => {
                 <FaTruck className="text-blue-500" />
               </div>
               <div>
-                <h2 className="font-bold text-lg">175</h2>
+                <h2 className="font-bold text-lg">196</h2>
                 <p className="text-gray-400 text-sm">Total Delivered</p>
               </div>
             </div>
@@ -78,7 +78,7 @@ const Dashboard = () => {
                 <FaTimesCircle className="text-red-500" />
               </div>
               <div>
-                <h2 className="font-bold text-lg">40</h2>
+                <h2 className="font-bold text-lg">50</h2>
                 <p className="text-gray-400 text-sm">Total Canceled</p>
               </div>
             </div>
@@ -88,7 +88,7 @@ const Dashboard = () => {
                 <FaDollarSign className="text-yellow-500" />
               </div>
               <div>
-                <h2 className="font-bold text-lg">Rp.128</h2>
+                <h2 className="font-bold text-lg">Rp.140</h2>
                 <p className="text-gray-400 text-sm">Total Revenue</p>
               </div>
             </div>
@@ -96,7 +96,8 @@ const Dashboard = () => {
             {/* IMPROVISASI */}
             <div className="bg-white p-4 rounded-lg shadow flex items-center gap-4">
               <div className="bg-purple-100 p-3 rounded-full">
-                <FaUsers className="text-purple-500" />
+                <FaUsers className="text-blue
+                -500" />
               </div>
               <div>
                 <h2 className="font-bold text-lg">320</h2>
