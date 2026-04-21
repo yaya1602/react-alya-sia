@@ -6,6 +6,7 @@ import Header from "./layouts/Header";
 import { Routes, Route } from "react-router-dom";
 import Customers from "./pages/Customer";
 import Orders from "./pages/Orders";
+import NotFound from "./pages/NotFound";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ function App() {
             
           
             <Routes>
+              <Route path="*" element={<NotFound />} />
               <Route path="/" element={<Dashboard />} />
               <Route path="/orders" element={<Orders />} />
               <Route path="/customers" element={<Customers />} />

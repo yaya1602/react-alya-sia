@@ -1,9 +1,15 @@
 import { FaHome, FaClipboardList, FaFileAlt } from "react-icons/fa";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
-  const [active, setActive] = useState("dashboard");
+
+  const menuClass = ({ isActive }) =>
+    `flex cursor-pointer items-center rounded-xl p-4 space-x-2
+    ${
+      isActive
+        ? "text-hijau bg-green-200 font-extrabold"
+        : "text-gray-600 hover:text-hijau hover:bg-green-200 hover:font-extrabold"
+    }`;
 
   return (
     <div className="w-64 bg-white min-h-screen shadow p-4">
@@ -20,45 +26,21 @@ const Sidebar = () => {
       <ul className="space-y-4">
         
         <li>
-          <Link
-          onClick={() => setActive("dashboard")}
-          to="/"
-          className={`flex items-center gap-2 cursor-pointer ${
-            active === "dashboard"
-              ? "text-green-500 font-semibold"
-              : "text-gray-500"
-          }`}
-        >
-          <FaHome /> Dashboard
-          </Link>
+          <NavLink to="/" className={menuClass}>
+            <FaHome /> Dashboard
+          </NavLink>
         </li>
 
         <li>
-          <Link
-          onClick={() => setActive("order")}
-          to="/orders"
-          className={`flex items-center gap-2 cursor-pointer ${
-            active === "order"
-              ? "text-green-500 font-semibold"
-              : "text-gray-500"
-          }`}
-        >
-          <FaClipboardList /> Order List
-          </Link>
+          <NavLink to="/orders" className={menuClass}>
+            <FaClipboardList /> Order List
+          </NavLink>
         </li>
 
         <li>
-          <Link
-          onClick={() => setActive("detail")}
-          to="/customers"
-          className={`flex items-center gap-2 cursor-pointer ${
-            active === "detail"
-              ? "text-green-500 font-semibold"
-              : "text-gray-500"
-          }`}
-        >
-          <FaFileAlt /> Order Detail
-          </Link>
+          <NavLink to="/customers" className={menuClass}>
+            <FaFileAlt /> Order Detail
+          </NavLink>
         </li>
 
       </ul>
