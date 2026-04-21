@@ -1,5 +1,6 @@
 import { FaHome, FaClipboardList, FaFileAlt } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [active, setActive] = useState("dashboard");
@@ -18,8 +19,10 @@ const Sidebar = () => {
       {/* MENU */}
       <ul className="space-y-4">
         
-        <li
+        <li>
+          <Link
           onClick={() => setActive("dashboard")}
+          to="/"
           className={`flex items-center gap-2 cursor-pointer ${
             active === "dashboard"
               ? "text-green-500 font-semibold"
@@ -27,10 +30,13 @@ const Sidebar = () => {
           }`}
         >
           <FaHome /> Dashboard
+          </Link>
         </li>
 
-        <li
+        <li>
+          <Link
           onClick={() => setActive("order")}
+          to="/orders"
           className={`flex items-center gap-2 cursor-pointer ${
             active === "order"
               ? "text-green-500 font-semibold"
@@ -38,10 +44,13 @@ const Sidebar = () => {
           }`}
         >
           <FaClipboardList /> Order List
+          </Link>
         </li>
 
-        <li
+        <li>
+          <Link
           onClick={() => setActive("detail")}
+          to="/customers"
           className={`flex items-center gap-2 cursor-pointer ${
             active === "detail"
               ? "text-green-500 font-semibold"
@@ -49,6 +58,7 @@ const Sidebar = () => {
           }`}
         >
           <FaFileAlt /> Order Detail
+          </Link>
         </li>
 
       </ul>
