@@ -1,14 +1,13 @@
 import { FaHome, FaClipboardList, FaFileAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-
+import { FaExclamationTriangle } from "react-icons/fa";
 const Sidebar = () => {
 
   const menuClass = ({ isActive }) =>
     `flex cursor-pointer items-center rounded-xl p-4 space-x-2
-    ${
-      isActive
-        ? "text-hijau bg-green-200 font-extrabold"
-        : "text-gray-600 hover:text-hijau hover:bg-green-200 hover:font-extrabold"
+    ${isActive
+      ? "text-hijau bg-green-200 font-extrabold"
+      : "text-gray-600 hover:text-hijau hover:bg-green-200 hover:font-extrabold"
     }`;
 
   return (
@@ -24,7 +23,7 @@ const Sidebar = () => {
 
       {/* MENU */}
       <ul className="space-y-4">
-        
+
         <li>
           <NavLink to="/" className={menuClass}>
             <FaHome /> Dashboard
@@ -33,13 +32,31 @@ const Sidebar = () => {
 
         <li>
           <NavLink to="/orders" className={menuClass}>
-            <FaClipboardList /> Order List
+            <FaClipboardList /> Orders
           </NavLink>
         </li>
 
         <li>
           <NavLink to="/customers" className={menuClass}>
-            <FaFileAlt /> Order Detail
+            <FaFileAlt /> Customers
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/error-400" className={menuClass}>
+            <FaExclamationTriangle /> Error 400
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/error-401" className={menuClass}>
+            <FaExclamationTriangle /> Error 401
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/error-403" className={menuClass}>
+            <FaExclamationTriangle /> Error 403
           </NavLink>
         </li>
 
