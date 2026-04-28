@@ -90,7 +90,9 @@ export default function Login() {
           </label>
           <input
             type="text"
+            name="email"
             id="email"
+            
             className="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm
                             placeholder-gray-400"
             placeholder="you@example.com"
@@ -103,6 +105,7 @@ export default function Login() {
           </label>
           <input
             type="password"
+            name="password"
             id="password"
             className="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm
                             placeholder-gray-400"
